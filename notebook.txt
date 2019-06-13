@@ -1,0 +1,43 @@
+6月13日上午
+ftp://176.204.88.88
+
+Git
+
+什么是Git？
+	最先进的版本控制系统
+	分布式
+	集中式
+
+Git诞生？
+	SVN
+	Linux  Linus
+
+Git的安装
+	安装好之后，告诉Git你的个人信息
+	git config --global user.name "你的名字"
+	git config --global user.email "你的邮箱"
+
+创建版本库
+	步骤：
+		创建一个空的目录 -- 进入到目录所在的地方
+		执行初始化命令
+		git init
+
+把文件添加到版本库
+	手动创建一个文本文件，并写入内容
+
+	查看仓库状态
+		git status
+	将文件添加到仓库
+		git add 文件名
+	将文件提交到仓库
+		git commit -m "提示信息"
+
+修改文件
+	手动修改文件
+	将文件添加到仓库
+		git add 文件名
+	将文件提交到仓库
+		git commit -m "提示信息"
+	查看每一个文件的版本信息
+		git log
