@@ -1,0 +1,62 @@
+Git：最先进的版本控制系统（免费）：清楚的记录每一次修改，进行管理。
+分布式版本系统：有一台初始的中心服务器，每一个人下载之后都是中心服务器。一次下载之后直至最终版本确定后上传。
+集中式版本系统：一个中心服务器，每一次改动上传，下载以中心服务器为核心。中心服务器不可以有任何异常
+SVN
+Linux系统-创始人Linus：最早的一个开源、免费的版本控制系统
+协同开发：
+Git：创建任意文件夹- git init（管理创始指令）——git config --global user .name"libo"（告诉git你的个人信息）——git config --global user .email"邮箱号"
+创建版本库  
+         步骤：创建一个空的目录——进入目录所在的地方
+              执行初始化命令
+              手动创建文件，并写入内容
+              查看仓库状态——git status
+              将文件添加到仓库——git add 文件名
+              将文件提交到仓库——git commit -m“提示信息”（用于提示自己，类似于备注）
+              查看历史信息——git log
+修改文件
+     手动修改文件
+     将文件添加到仓库——git add 文件名
+     将文件提交到仓库——git commit -m“提示信息”  
+     查看每一个版本的信息——git log
+ 后退版本——git reset --hard HEAD^ 
+    版本-HEAD  上一个版本-HEAD^  上上个版本-HEAD^^   前100个版本-HEAD~100
+ 查看版本库历史纪录——git reflog
+ 工作区和暂存区：
+ 撤销修改
+       场景1：只修改工作区，没有add和commit （用最新版本替换当前工作区）————git checkout --文件名
+       场景2：修改文件，已经add，暂未commit （清除暂存区）————git reset HEAD 文件名   +重复场景一
+       场景3：已经commit  ————直接回版本
+删除文件：
+        误删：
+            手动删除了一个文件，需要恢复————git checkout
+        确认删除：
+            手动删除文件
+            添加到暂存区
+            提交
+
+远程仓库：
+  Github：1.注册账号
+         2.生成不能记得SSH（密钥）
+          ssh-keygen -t rsa -C "邮箱地址"
+          ssh-keygen -t rsa -C "1368672198@qq.com"
+将本地仓库连接到远程—
+    git remote add origin 地址
+第一次把本地仓库推送到远程
+    git push -u origin master
+以后推送
+    git push originmaster
+从远程仓库下载到本地
+    git clone 地址
+
+分支管理系统
+    分支的创建与合并
+        查看分支
+          git branch
+        穿件分支
+          git branch 分支名
+        切换分支
+          git checkout 分支名
+        合并分支
+          git merge 分支名
+        删除分支
+          git branch -d 分支名  
